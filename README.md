@@ -7,4 +7,4 @@ Rabbit MQ implementation with Springboot application
 - Fanout Exchange Configuration with Spring AMQP
 - Header Exchange Configuration with Spring AMQP
 - Crate Binding Between Queue and Exchange
-- Recevice and processing Secnarion
+- Recevice and processing Scenario
