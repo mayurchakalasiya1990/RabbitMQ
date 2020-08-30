@@ -1,0 +1,33 @@
+As an administrator, start and stop the server as usual for Debian-based systems:
+
+# stop the local node
+>>sudo service rabbitmq-server stop
+
+# start it back
+>>ssudo service rabbitmq-server start
+
+# check on service status as observed by service manager
+>>sudo service rabbitmq-server status
+
+# checks if the local node is running and CLI tools can successfully authenticate with it
+>>sudo rabbitmq-diagnostics ping
+
+# prints enabled components (applications), TCP listeners, memory usage breakdown, alarms
+# and so on
+>>sudo rabbitmq-diagnostics status
+
+# prints effective node configuration
+>>sudo rabbitmq-diagnostics environment
+
+# performs a more extensive health check of the local node
+>>sudo rabbitmq-diagnostics node_health_check
+
+
+#system service logs can be inspected using
+
+>>sudo journalctl --system | grep rabbitmq
+
+#it must be enabled before it can be used. That's done using rabbitmq-plugins:
+cd /usr/sbin
+sudo rabbitmq-plugins enable rabbitmq_management
+
